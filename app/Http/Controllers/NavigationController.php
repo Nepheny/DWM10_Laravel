@@ -22,19 +22,7 @@ class NavigationController extends Controller
                 return abort('404', 'Il y a eu une erreur');
             }
         } else {
-            return view('welcome');
-        }
-    }
-
-    public function testPage(Request $request) {
-        if($request->path() !== "/test") {
-            try {
-                return view("/test");
-            } catch (\Exception $e) {
-                return abort('404', 'Il y a eu une erreur');
-            }
-        } else {
-            return view('welcome');
+            return view('home');
         }
     }
 }

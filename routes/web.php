@@ -12,7 +12,6 @@
 */
 
 // Custom routes
-Route::get('/test', 'NavigationController@testPage');
 
 // Base route, require a view named like the URI
 Route::get('/{all?}', 'NavigationController@showPage');
