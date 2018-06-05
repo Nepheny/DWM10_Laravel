@@ -11,6 +11,9 @@
             @include('parts/header')
         </header>
         <main>
+            @if(isset($request) && $request->session()->has('status'))
+                <p>{{ Session::get('status') }}</p>
+            @endif
             <aside>
                 @include('parts/aside')
             </aside>

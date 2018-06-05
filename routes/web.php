@@ -12,6 +12,12 @@
 */
 
 // Custom routes
+Route::get('/books', 'BookController@display');
+Route::get('/book/new', 'BookController@insertForm');
+Route::post('/book/new', 'BookController@insertAction');
+Route::get('/book/update', 'BookController@updateForm');
+Route::post('/book/update', 'BookController@updateAction');
+Route::post('/book/delete', 'BookController@deleteAction');
 
 // Base route, require a view named like the URI
 Route::get('/{all?}', 'NavigationController@showPage');
