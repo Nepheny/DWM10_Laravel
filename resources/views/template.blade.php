@@ -11,8 +11,15 @@
             @include('parts/header')
         </header>
         <main>
-            @if(isset($request) && $request->session()->has('status'))
-                <p>{{ Session::get('status') }}</p>
+            @if(Session::has('status'))
+            <section class="flash-container">
+                <div class="flash-close">
+                    <a href="">X</a>
+                </div>
+                <div class="flash">
+                    <p>{{ Session::get('status') }}</p>
+                </div>
+            </section>
             @endif
             <aside>
                 @include('parts/aside')
