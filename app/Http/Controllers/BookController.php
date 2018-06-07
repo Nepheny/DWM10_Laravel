@@ -55,7 +55,7 @@ class BookController extends Controller
     {
         // $book = Book::where('id', $request->input('id'))->get();
         $book = Book::find($request->input('id'));
-        return view('book.update', ['book' => $book,]);
+        return view('book.update', ['book' => $book]);
     }
 
     public function updateAction(Request $request)
